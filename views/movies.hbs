@@ -1,0 +1,18 @@
+<h1>Favorite Movies</h1>
+
+<form>
+    <p>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+    </p>
+    <button id="addMovie">Add Movie</button>
+</form>
+
+<ol id="movies">
+    {{#each movies}}
+    <li>{{this.title}}</li>
+    <button class="deleteMovie" data-id="{{this.id}}"></button>
+    {{/each}}
+</ol>
+
+<script src="./movie.js"></script>
